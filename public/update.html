@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <link rel="stylesheet" href="main.css">
+    <title>العراق أكاديمي - مشغل الفيديوهات</title>
+    <link rel="stylesheet" href="bootstrap.css">
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div id="welcome">
+        <div class="logo-wrapper">
+          <img src="assets/logo.png" alt="logo" class="logo">  
+        </div>
+  
+        <div class="content-wrapper align-center my-4">
+          
+          <div class="mt-4">
+            <h2 class="primary--text">التحديث مطلوب</h2>
+            <p>الرجاء تحديث البرنامج حتى تتمكن من مشاهدة الدورة</p>
+            <button class="btn btn-success mx-auto mt-3" onclick="downloadApp()">تحميل البرنامج</button>
+          </div>
+        </div>
+  
+        <div class="footer">
+          <a class="primary--text" onclick="openWebsite()">العراق أكاديمي</a>
+          &copy; كل الحقوق محفوظة <br>
+          النسخة 1.0.0
+          
+  
+        </div>
+      </div>
+  
+      <div id="viewWrapper" class="d-none">
+        <webview id="webview" src="" plugins disablewebsecurity ></webview>
+      </div>
+
+    </div>
+
+
+    <!-- You can also require other files to run in this process -->
+    <script>
+      const {shell} = require('electron');
+      function downloadApp(){
+        shell.openExternal('https://api.iq-academy.com/app/download')
+      }
+    </script>
+  </body>
+</html>

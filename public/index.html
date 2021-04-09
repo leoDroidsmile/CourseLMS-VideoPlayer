@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <link rel="stylesheet" href="main.css">
+    <title>العراق أكاديمي - مشغل الفيديوهات</title>
+    <link rel="stylesheet" href="bootstrap.css" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div id="loading" class="d-none">
+      <div class="my-3">
+        <a onclick="openWebsite">
+          <img src="assets/logo.png" alt="logo" class="logo">
+        </a>
+      </div>
+      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+      
+    </div>
+
+    <div class="container">
+
+      <div id="welcome">
+        <div class="logo-wrapper">
+          <img src="assets/logo.png" alt="logo" class="logo">  
+        </div>
+  
+        <div class="content-wrapper align-center mb-4">
+          <div class="vector">
+              <img class="img-fluid" src="./assets/welcome.jpg">
+          </div>
+          <div class="mt-4">
+            <h2 class="primary--text">مشغل الفيديوهات</h2>
+            <p>الرجاء الضغط على زر "مشاهدة" من صفحة الدورة في الموقع الخاص بنا</p>
+          </div>
+        </div>
+  
+        <div class="footer">
+          <a class="primary--text" onclick="openWebsite()">العراق أكاديمي</a>
+          &copy; كل الحقوق محفوظة <br>
+          النسخة 1.0.0
+          
+  
+        </div>
+      </div>
+  
+      <div id="viewWrapper" class="d-none">
+        <webview id="webview" src="" plugins disablewebsecurity ></webview>
+      </div>
+
+    </div>
+
+
+    <!-- You can also require other files to run in this process -->
+    <script src="../dist/renderer.js"></script>
+    <script>
+      const {shell} = require('electron');
+      function openWebsite(){
+        shell.openExternal('https://iq-academy.com')
+      }
+    </script>
+  </body>
+</html>

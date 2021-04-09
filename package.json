@@ -1,0 +1,63 @@
+{
+  "name": "iacademy_player",
+  "productName": "Iraq Academy Player",
+  "version": "1.0.0",
+  "description": "DRM Player for iq-academy.com built with electron by Ebrahim Maher",
+  "main": "dist/main.js",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode 'production'",
+    "dev": "webpack --mode 'development'",
+    "electron": "electron .",
+    "start": "npm run dev && electron .",
+    "package-win": "npm run build && electron-packager . \"Iraq Academy Player\" --overwrite --asar --no-prune --icon=public/assets/icon.ico --platform=win32 --arch=ia32 --ignore=node_modules/* --version-string.ProductName=\"Iraq Academy\"",
+    "installer-win": "node installer.js"
+  },
+  "repository": "https://github.com/ebrahimMaher/iacademy-player",
+  "keywords": [
+    "Electron",
+    "iacademy",
+    "deskptop",
+    "viewer",
+    "player"
+  ],
+  "author": "Ebrahim Maher",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "axios": "^0.19.2",
+    "babel-loader": "^8.1.0",
+    "crypto-js": "^4.0.0",
+    "electron": "^9.0.0",
+    "electron-packager": "^14.2.1",
+    "electron-winstaller": "^4.0.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "build": {
+    "appId": "ebrahimmaher.iqacademyplayer-win32",
+    "protocols": {
+      "name": "iqacademy-player",
+      "schemes": [
+        "iqacademyplayer"
+      ]
+    },
+    "mac": {
+      "category": "public.app-category.Reference"
+    },
+    "win": {
+      "icon": "./public/assets/icon.ico"
+    },
+    "files": [
+      "./dist/**/*",
+      "./public/**/*",
+      "./assets/**/*"
+    ],
+    "directories": {
+      "buildResources": "public"
+    }
+  }
+}
