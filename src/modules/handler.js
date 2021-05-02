@@ -60,7 +60,7 @@ export default {
     
                     }else{
                         // reply with "url" of iframe
-                        event.reply('asynchronous-reply', data.url);
+                        event.reply('asynchronous-reply', data);
                     }
     
                 }).catch(err=>{

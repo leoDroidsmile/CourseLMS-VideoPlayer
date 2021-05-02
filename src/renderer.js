@@ -7,7 +7,7 @@
     // In renderer process (web page).
     import {ipcRenderer} from 'electron';
     
-    ipcRenderer.on('asynchronous-reply', (event, url) => {
+    ipcRenderer.on('asynchronous-reply', (event, data) => {
         // start loading
         document.getElementById('loading').classList.remove('d-none');
         
@@ -17,7 +17,9 @@
         // set webview src
         document.getElementById('viewWrapper').classList.remove('d-none');
         
-        document.getElementById('webview').setAttribute('src', url);
+        document.getElementById('webview').setAttribute('src', data.url);
+
+        document.getElementById('security').innerHTML = data.userId;
 
         // stop loading after 2 seconds
         window.setTimeout(()=>{

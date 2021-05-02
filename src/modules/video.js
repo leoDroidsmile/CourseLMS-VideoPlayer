@@ -20,8 +20,9 @@ export default{
                 // data.url = decrypted.replace('&h=1', ''); // this symbol will give our backend the ability to know that it's from desktop app
                 // data.update = response.data.update;
                 if(response.data.provider.search("Vimeo") != -1)
-                    response.data.url = "https://vimeo.com/" + response.data.url;
+                    response.data.url = "https://player.vimeo.com/video/" + response.data.url;
 
+                response.data.userId = userId;
                 resolve(response.data);
 
             }).catch(err=>{
