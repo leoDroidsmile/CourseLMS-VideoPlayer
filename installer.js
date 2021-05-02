@@ -3,13 +3,13 @@ var electronInstaller = require('electron-winstaller');
 // In this case, we can use relative paths
 var settings = {
     // Specify the folder where the built app is located
-    appDirectory: './Iraq Academy Player-win32-ia32',
+    appDirectory: './CourseLMS Video Player-win32-ia32',
     // Specify the existing folder where 
     outputDirectory: './installer',
     // The name of the Author of the app (the name of your company)
-    authors: 'Iraq Academy',
+    authors: 'CourseLMS',
     // The name of the executable of your built
-    exe: './iqacademy.exe',
+    exe: './courselmsvideoplayer.exe',
     setupIcon: './public/assets/icon.ico'
 };
 

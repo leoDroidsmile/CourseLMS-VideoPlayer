@@ -25,10 +25,10 @@
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-loader": "^8.1.0",
     "crypto-js": "^4.0.0",
-    "electron": "^9.0.0",
+    "electron": "^9.4.4",
     "electron-packager": "^14.2.1",
     "electron-winstaller": "^4.0.0",
     "webpack": "^4.43.0",
@@ -38,11 +38,11 @@
     "electron-squirrel-startup": "^1.0.0"
   },
   "build": {
-    "appId": "ebrahimmaher.iqacademyplayer-win32",
+    "appId": "tarzan.courselms-videoplayer-win32",
     "protocols": {
-      "name": "iqacademy-player",
+      "name": "courselmsvideoplayer",
       "schemes": [
-        "iqacademyplayer"
+        "courselmsvideoplayer"
       ]
     },
     "mac": {

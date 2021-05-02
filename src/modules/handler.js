@@ -29,7 +29,7 @@ export default {
         this.mainWindow.setContentProtection(true)
     
         // Open the DevTools (testing)
-        // this.mainWindow.webContents.openDevTools()
+        this.mainWindow.webContents.openDevTools()
     },
     
     
@@ -37,7 +37,7 @@ export default {
     deepVideoHandler(){
         // check if user comes from 'website' by deep linking:
         let linkData = deep.getLink();
-    
+        
         // testing
     
         // let linkData = {
@@ -52,7 +52,7 @@ export default {
                 
                 // get url from api, decrypt it .. etc (in modules/video.js)
                 let appVersion = app.getVersion();
-                video.getVideo(linkData.id, linkData.token, appVersion).then(data=>{
+                video.getVideo(linkData.user, linkData.class, appVersion).then(data=>{
                     
                     if (data.update){
                         // app version is old and user must update
@@ -67,9 +67,10 @@ export default {
                     
                     this.error(1);
                 });
-    
+                // event.reply('asynchronous-reply', linkData.videoUrl);
+
             });
-    
+                        
         }else{
             // no deep linking, just welcome page will appear!
         }
