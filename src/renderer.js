@@ -19,7 +19,21 @@
         
         document.getElementById('webview').setAttribute('src', data.url);
 
-        document.getElementById('security').innerHTML = data.userId;
+        document.getElementById('security1').innerHTML = data.userId;
+        document.getElementById('security1').style.display="none";
+        document.getElementById('security1').style.display="block";
+
+        document.getElementById('security2').innerHTML = data.userId;
+        document.getElementById('security2').style.display="none";
+        document.getElementById('security2').style.display="block";
+
+        document.getElementById('security3').innerHTML = data.userId;
+        document.getElementById('security3').style.display="none";
+        document.getElementById('security3').style.display="block";
+
+        document.getElementById('security4').innerHTML = data.userId;
+        document.getElementById('security4').style.display="none";
+        document.getElementById('security4').style.display="block";
 
         // stop loading after 2 seconds
         window.setTimeout(()=>{

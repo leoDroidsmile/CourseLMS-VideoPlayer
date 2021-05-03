@@ -29,7 +29,7 @@ export default {
         this.mainWindow.setContentProtection(true)
     
         // Open the DevTools (testing)
-        this.mainWindow.webContents.openDevTools()
+        // this.mainWindow.webContents.openDevTools()
     },
     
     
