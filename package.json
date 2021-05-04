@@ -1,8 +1,8 @@
 {
-  "name": "iacademy_player",
-  "productName": "Iraq Academy Player",
+  "name": "lmsiq_videoplayer",
+  "productName": "LMSIQ Player",
   "version": "1.0.0",
-  "description": "DRM Player for iq-academy.com built with electron by Ebrahim Maher",
+  "description": "LMSIQ Player for lmsiq.com built with electron by Anton",
   "main": "dist/main.js",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
     "dev": "webpack --mode 'development'",
     "electron": "electron .",
     "start": "npm run dev && electron .",
-    "package-win": "npm run build && electron-packager . \"Iraq Academy Player\" --overwrite --asar --no-prune --icon=public/assets/icon.ico --platform=win32 --arch=ia32 --ignore=node_modules/* --version-string.ProductName=\"Iraq Academy\"",
+    "package-win": "npm run build && electron-packager . \"LMSIQ Player\" --overwrite --asar --no-prune --icon=public/assets/icon.ico --platform=win32 --arch=ia32 --ignore=node_modules/* --version-string.ProductName=\"LMSIQ\"",
     "installer-win": "node installer.js"
   },
   "repository": "https://github.com/ebrahimMaher/iacademy-player",
@@ -21,7 +21,7 @@
     "viewer",
     "player"
   ],
-  "author": "Ebrahim Maher",
+  "author": "Anton Petrov",
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
@@ -38,7 +38,7 @@
     "electron-squirrel-startup": "^1.0.0"
   },
   "build": {
-    "appId": "tarzan.courselms-videoplayer-win32",
+    "appId": "tarzan.lmsiq-videoplayer-win32",
     "protocols": {
       "name": "courselmsvideoplayer",
       "schemes": [

@@ -8,10 +8,10 @@ export default {
     createWindow () {
         // Create the browser window.
         this.mainWindow = new BrowserWindow({
-            width: 1200,
-            height: 900,
-            minWidth: 800,
-            minHeight: 600,
+            width: 840,
+            height: 630,
+            minWidth: 840,
+            minHeight: 630,
             backgroundColor: '#fff', // #23AFB1
             webPreferences: {
                 webviewTag: true,
