@@ -1,11 +1,10 @@
-# Iraq Academy Player (with DRM Protection)
-## By: `Ebrahim Maher`
+# CourseLMS-VideoPlayer is Video Player (with DRM Protection)
 
 ## How To Use
 
 ```bash
 # Clone this repository
-git clone https://github.com/ebrahimmaher/iacademy-player
+git clone https://github.com/truedev0420/CourseLMS-VideoPlayer
 # Go into the repository
 cd iacademy-player
 # Install dependencies
