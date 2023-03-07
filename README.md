@@ -4,7 +4,7 @@
 
 ```bash
 # Clone this repository
-git clone https://github.com/truedev0420/CourseLMS-VideoPlayer
+git clone https://github.com/leoDroidsmile/CourseLMS-VideoPlayer
 # Go into the repository
 cd iacademy-player
 # Install dependencies
